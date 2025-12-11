@@ -17,9 +17,9 @@ class Project(TimeStampedModel):
 
     def __str__(self):
         """
-        Return the project's title as its string representation.
+        Project string representation using its title.
         
         Returns:
-            str: The title of the project.
+            str: The project's title used as its string representation.
         """
         return self.title

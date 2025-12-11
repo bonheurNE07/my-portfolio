@@ -4,7 +4,7 @@ from .models import Project
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = [
+        fields = (
             'id',
             'title',
             'slug',
@@ -15,4 +15,4 @@ class ProjectSerializer(serializers.ModelSerializer):
             'live_url',
             'image',
             'created_at',
-        ]
+        )
