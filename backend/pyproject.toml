@@ -1,0 +1,28 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Backend API for Portfolio using Django and DRF"
+authors = [
+    {name = "bonheurNE07",email = "bonheurndezenc@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "django (>=6.0,<7.0)",
+    "djangorestframework (>=3.16.1,<4.0.0)",
+    "django-cors-headers (>=4.9.0,<5.0.0)",
+    "python-decouple (>=3.8,<4.0)",
+    "pillow (>=12.0.0,<13.0.0)",
+    "markdown (>=3.10,<4.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=25.12.0,<26.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
+]
