@@ -138,16 +138,19 @@ FILE_UPLOAD_HANDLERS = [
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
+CLOUDINARY_CREDENTIALS = {
+    "cloud_name": config("CLOUDINARY_CLOUD_NAME"),
+    "api_key": config("CLOUDINARY_API_KEY"),
+    "api_secret": config("CLOUDINARY_API_SECRET"),
+}
+
 CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": config("CLOUDINARY_CLOUD_NAME"),
-    "API_KEY": config("CLOUDINARY_API_KEY"),
-    "API_SECRET": config("CLOUDINARY_API_SECRET"),
+    "CLOUD_NAME": CLOUDINARY_CREDENTIALS["cloud_name"],
+    "API_KEY": CLOUDINARY_CREDENTIALS["api_key"],
+    "API_SECRET": CLOUDINARY_CREDENTIALS["api_secret"],
 }
 
-CLOUDINARY = {
-    'cloud_name': config('CLOUDINARY_CLOUD_NAME'),
-    'api_key': config('CLOUDINARY_API_KEY'),
-    'api_secret': config('CLOUDINARY_API_SECRET'),
-}
 
-MEDIA_URL = "/media/"
+CLOUDINARY = CLOUDINARY_CREDENTIALS
+
+MEDIA_URL = "/media/
