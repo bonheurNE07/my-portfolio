@@ -1,3 +1,49 @@
-.env
+# Byte-compiled / optimal files
 __pycache__/
-.*sqlite3
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# IDE and editor files
+.idea/           # JetBrains IDEs (PyCharm, etc.)
+.vscode/         # VS Code
+*.swp            # Vim swap files
+*.sublime-project
+*.sublime-workspace
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env
+db.sqlite3
+# For tools like pipenv, poetry, uv, you might want to include the lock files in version control
+# depending on project requirements (see respective documentation for best practices).
+# Pipfile.lock
+# poetry.lock
+# uv.lock
+
+# Distribution / packaging
+dist/
+build/
+*.whl
+
+# Tests
+.pytest_cache/
+.tox/
+
+# Miscellaneous
+.env             # Environment variables file
+logs/
+*.log
+npm-debug.log*
+pids/
+*.pid
+*.seed
+*.pyenv
+
+# OS-generated files
+.DS_Store
+Thumbs.db
